@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicionales - Ejercicio 11</title>
+</head>
+<body>
+    <h1>Condicionales 11</h1>
+    <script>
+    let origen, destino, descuento=0;
+
+    origen=prompt("Indica tu ciudad de origen","0");
+    destino=prompt("Indica tu ciudad de destino","0");
+
+    if (origen=="Palma"){
+        if(destino=="Barcelona"){
+        descuento=5;
+    }else if(destino=="Madrid"){
+        descuento=10;
+        }else if(destino=="Valencia")
+        descuento=15;
+    }else {
+        descuento="No aplica descuento";}
+
+    
+    
+
+    document.write(`<h3>Su origen es: ${origen} y su destino es ${destino}. Descuento: ${descuento}</h3>`);
+
+    </script>
+</body>
+</html>

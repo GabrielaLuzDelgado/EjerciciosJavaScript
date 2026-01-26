@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicionales - Ejercicio 14</title>
+</head>
+<body>
+    <h1>Condicionales 14</h1>
+    <script>
+    let mes;
+    let cantidad;
+        mes=prompt("Introduce el número del mes","");
+
+        if(mes==1 ||mes==3 ||mes==5 ||mes==7 ||mes==8 ||mes==10 ||mes==12){
+            cantidad=31;
+        }else if(mes==4 ||mes==6 ||mes==9 ||mes==11){
+            cantidad=30;
+        }else{
+            cantidad="28 o 29";
+        }
+        document.write(`El mes ${mes} tiene ${cantidad} días`);
+    </script>
+    
+
+
+</body>
+</html>

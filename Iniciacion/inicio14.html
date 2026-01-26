@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Ejercicio 14</title>
+</head>
+<body>
+    <h1>Inicio - Ejercicio 14 - Repetir hasta el 7</h1>
+    <script>
+        // 1. Declaramos la variable vacía. 
+        var num;
+
+        // Bucle: Se repite MIENTRAS el número NO sea 7
+        while (num !== 7) {
+            
+            // Pedimos el dato al usuario
+            var dato = prompt(`Introduce el número del 1 al 10:`, '');
+
+            // Convertimos el texto a número entero
+            num = parseInt(dato);
+
+            // Si el usuario escribió un número válido, lo mostramos en pantalla
+            
+            document.write(`El número introducido es: ${num} <br>`);
+            }
+
+
+        // Cuando el usuario introduce el numero 7 finaliza el programa
+        document.write("<br><h2>Elegiste el número 7. Fin del programa.</h2>");
+    </script>
+</body>
+</html>
