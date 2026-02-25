@@ -8,23 +8,22 @@
 
 
 <script>
-    function calcular10perCent()
+    function calcular10()
     {
         const dato=parseFloat(document.formulario.numero.value);
         let porCiento =(dato*0.1).toFixed(2); // redondear a 2 decimales
         document.getElementById("resultado").innerHTML=`El 10% de ${dato} es: ${porCiento} <br>` 
-       }
+    }
 
 
 </script>
 
 </head>
 <body>
+
+    <h1>Ejercicio 2</h1>
     <p>Realizar un programa en el cual el usuario introduce un valor en un Form y por pantalla sale como resultado el 10%</p>
-
-
-    <h2>Cálculo del 10%</h2>
-    <form name="formulario" onsubmit="event.preventDefault(); calcular10perCent();">
+    <form name="formulario" onsubmit="event.preventDefault(); calcular10();">
         <label for="numero">Introduce un número:</label>
         <input type="number" id="numero" required>
         <button type="submit">Calcular</button>

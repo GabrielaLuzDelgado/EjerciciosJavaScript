@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9</title>
+    <script>
+        function calcular(){
+        let n1 = parseFloat(document.getElementById("nota1").value)
+        let n2 = parseFloat(document.getElementById("nota2").value)
+        let p1 = parseFloat(document.getElementById("por1").value)
+        let p2 = parseFloat(document.getElementById("por2").value)
+
+        if(p1+p2===100){
+            let suma1= n1*p1/100;
+            let suma2= n2*p2/100;
+            let total=suma1+suma2;
+            document.getElementById("resultado").innerHTML =`La nota final es: ${total.toFixed(2)}`;
+        }
+        else{
+            document.getElementById("resultado").innerHTML ="Revisa los valores. Ambos porcentajes deben sumar 100"
+        }
+
+        
+        }
+    
+        </script>
+</head>
+<body>
+    <h1>Ejercicio 9</h1>
+    <h2>Calculo de Notas</h2>
+    <p>Las notas se calculan con el valor de la primera y segunda evaluación y el porcentaje de impacto de cada una en la nota final.
+        <b>Importante: ambos porcentajes deben sumar 100</b>
+    </p>
+    <form name="formulario">
+        <p>Escribe la nota 1:</p>
+        <input type="number" name="nota1" id="nota1">
+        <p>Porcentaje 1:</p>
+        <input type="number" name="por1" id="por1">
+        <p>Escribe la nota 2:</p>
+        <input type="number" name="nota2" id="nota2">
+        <p>Porcentaje 2:</p>
+        <input type="number" name="por2" id="por2">
+        <input type="button" value="Calcular" onclick="calcular()">
+
+    </form>
+    <br>
+    <div id="resultado">
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8</title>
+    <script>
+        function calcular(){
+        let valor = document.getElementById("grados").value
+        const num = parseInt(valor)
+        var fahrenheit = (num*9/5)+32
+        
+        document.getElementById("resultado").innerHTML=`Su equivalente en Grados Fahrenheit es ${fahrenheit}</br>`
+        }
+        function calcularC(){
+        let valorF = document.getElementById("gradosF").value
+        const numF = parseInt(valorF)
+        var celsius = (numF-32)*5/9
+        
+        document.getElementById("resultadoF").innerHTML=`Su equivalente en Grados Celsius es ${celsius}</br>`
+        }
+    
+    
+        </script>
+</head>
+<body>
+    <h1>Ejercicio 8</h1>
+    <h4>Escribe un valor en Grados Celsius</h4>
+    <form name="formularioC">
+        <input type="number" name="grados" id="grados">
+        <input type="button" value="Click aqui" onclick="calcular()">
+    </form>
+    <br>
+    <div id="resultado">
+    </div>
+        <h4>Escribe un valor en Grados Fahrenheit</h4>
+    <form name="formularioF">
+        <input type="number" name="gradosF" id="gradosF">
+        <input type="button" value="Click aqui" onclick="calcularC()">
+    </form>
+    <br>
+    <div id="resultadoF">
+    </div>
+</body>
+</html>

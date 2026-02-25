@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+    <script>
+        function ejecutar(){
+        
+        let valor = document.getElementById("numero").value
+        const num=parseInt(valor);
+        let cuadrado=num*num;  
+        let cubo=num*num*num;  
+        document.getElementById("resultado").innerHTML=`El cuadrado de ${num} es: ${cuadrado} <br>` 
+        document.getElementById("resultado2").innerHTML=`El cubo de ${num} es: ${cubo} <br>` 
+    
+        }
+
+    </script>
+</head>
+<body>
+    <h1>Ejercicio 4</h1>
+    <form name="formulario">
+    Introduce un número:<input type="number" size="10" name="numero" id="numero"/>
+
+    <input type="button" value="Pulsa aquí" onclick="ejecutar()"/>
+    </form>
+    <p></p>
+    <p>A. Usando Una función</p>
+    <div id="resultado">
+    </div>
+    <div id="resultado2">
+    </div>
+    <p>B. Usando dos funciones</p>
+    <div id="resultado3">
+    </div>
+    <div id="resultado4">
+    </div>
+
+</body>
+</html>
