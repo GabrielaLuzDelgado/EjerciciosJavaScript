@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 6</title>
-</head>
     <script>
         function calcula()
         {
@@ -12,23 +11,26 @@
             let dato = document.getElementById("lista");
             let valor = dato.options[lista.selectedIndex].value; // .text
             let resultado = numero * valor;
-            document.getElementById("salida").innerHTML=resultado;
-        }    
-</script>
+        document.getElementById("salida").innerHTML = resultado;
+        }
+    </script>
+    
+</head>
+    
 <body>
 
      <h1>Ejercicio 6</h1>
     <form name="fdatos">
         Introduce número: <input type="text" size="10" name="entrada"/>
-        <b> x </b>
-        <select id="lista" onchange="calcula">
-            <option value="1"selected>uno</option>
-            <option value="2"selected>dos</option>
-            <option value="3"selected>tres</option>
-            <option value="4"selected>cuatro</option>
+        <b> X </b>
+        <select id="lista" onchange="calcula()">
+        <option value="1" selected>uno</option>
+        <option value="2">dos</option>
+        <option value="3">tres</option>
+        <option value="4">cuatro</option>
         </select>
-    </form> 
-        <div id="salida"></div>
+        </form>
+        <div id ="salida"></div>
 
     </body>
 </html>
