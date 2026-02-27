@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 11</title>
+    <script>
+        function calcularPeso(){
+            let altura = parseFloat(document.getElementById("altura").value);
+            let edad = parseInt(document.getElementById("edad").value); 
+            let sexo = document.getElementById("sexo").value;
+            let pesoActual = parseFloat(document.getElementById("peso").value); 
+
+            let pesoReferencia = 50 + ((altura - 150) / 4) * 3 + (edad - 20) / 4;
+
+            if (sexo === "mujer") {
+            pesoReferencia = pesoReferencia * 0.9;
+            }
+
+            document.getElementById("resultado").innerHTML= `El peso de referencia es ${pesoReferencia.toFixed(3)}`
+        }
+    </script>
+</head>
+<body>
+    <h1>Ejercicio 11</h1>
+
+    <h3>Calculadora de peso de referencia</h3>
+
+    <form>
+    <p>Altura (cm): <input type="number" id="altura"></p>
+    <p>Edad: <input type="number" id="edad"></p>
+    <p>Sexo: 
+    <select id="sexo">
+        <option value="hombre">Hombre</option>
+        <option value="mujer">Mujer</option>
+    </select>
+    </p>
+    <p>Peso actual (kg): <input type="number" id="peso"></p>
+    
+    <input type="button" value="Calcular" onclick="calcularPeso()">
+</form>
+
+<br>
+<div id="resultado"></div>
+</body>
+</html>

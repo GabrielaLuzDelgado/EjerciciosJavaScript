@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bucles - Ejercicio 5</title>
+    <script>
+        let fila;
+        let columna = parseInt(prompt("Introduce el tamaño: ", "0"))
+            for (fila = 1; fila <= columna; fila++){
+                for (espacios = columna - fila; espacios > 0; espacios--)
+                document.write("&nbsp&nbsp");
+                for (contador = 1; contador < (2 * fila); contador++)
+                document.write("*");
+                document.writeln("</br>");
+            }
+            for(fila=columna-1;fila>=1;fila--){
+                for (espacio=columna-fila;espacio>0;espacio--)
+                    document.write("&nbsp&nbsp");
+                for (contador = 1; contador < (2 * fila); contador++)
+                document.write("*");
+                document.writeln("</br>");
+
+            }
+
+    </script>
+</head>
+<body>
+    <h1>Ejercicio 5</h1>
+</body>
+</html>

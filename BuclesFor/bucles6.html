@@ -3,26 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Condicionales - Ejercicio 15</title>
+    <title>Bucles - Ejercicio 6</title>
+    <script>
+        function funcionUno()
+        {
+        let result=""
+        let i;
+        for (i=1; i<=6; i++){
+            result = result + `<h${i}> Titulo ${i} </h>`;
+            }
+        document.getElementById("central").innerHTML= result;
+        }
+    </script>
 </head>
 <body>
-    <h1>Condicionales 15</h1>
-    <script>
+    <h1>Ejercicio 6</h1>
+    <p>Pulsa el boton y se crean HTML tags de la 1 a la 6</p>
+    <button onclick="funcionUno()">Pulsa aqui</button>
+    <div id="central"></div>
     
-
-    let dia, mes, año;
-    mes=prompt(`Introduzca el número del mes:`,``);
-    mes=parseInt(mes);
-    
-    if(mes==1 ||mes==3 ||mes==5 ||mes==7 ||mes==8 ||mes==10 ||mes==12){
-            document.write("Este mes tiene 31 dias");
-        }else{
-        if(mes==2)
-            document.write("Este mes puede tener 28 dias");
-        else
-            document.write("Este mes tiene 30 dias");
-        }
-    
-    </script>
 </body>
 </html>

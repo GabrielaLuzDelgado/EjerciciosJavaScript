@@ -11,7 +11,7 @@
     function calcular10()
     {
         const dato=parseFloat(document.formulario.numero.value);
-        let porCiento =(dato*0.1).toFixed(2); // redondear a 2 decimales
+        let porCiento =(dato*0.1); 
         document.getElementById("resultado").innerHTML=`El 10% de ${dato} es: ${porCiento} <br>` 
     }
 
