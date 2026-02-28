@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bucles - Ejercicio 7</title>
+<script>
+    function generarTabla() {
+        let num1 = parseInt(document.getElementById("numero1").value);
+        let num2 = parseInt(document.getElementById("numero2").value);
+        let error= "ERROR - Verificar los números, deben ir del 1 al 10";
+
+        let tablaHTML = "<table>"; 
+
+        if(num1>0 && num2>0 && num1<11 && num2<11){
+        for (let i = 1; i <= num2; i++) {
+            let multiplicacion = num1 * i;
+            
+            tablaHTML += `
+                <tr>
+                    <td>${num1} x ${i}</td>
+                    <td>=</td>
+                    <td>${multiplicacion}</td>
+                </tr>
+            `;
+        }
+        }else{
+            document.getElementById("error").innerHTML = error;
+        }
+        tablaHTML += "</table>";
+
+        document.getElementById("resultado").innerHTML = tablaHTML;
+    }
+</script>
+
+</head>
+<body>
+
+    <h1>Ejercicio 7</h1>
+
+    <form>
+    <p>
+        Indica un número (1-10): <br>
+        <input type="number" id="numero1">
+    </p>
+    <p>
+        Multiplicado hasta: (1-10): <br>
+        <input type="number" id="numero2">
+    </p>
+    
+    <input type="button" value="Crear Tabla" onclick="generarTabla()">
+    </form>
+
+    <br>
+
+    <div id="resultado"></div>
+    <div id="error"></div>
+    
+</body>
+</html>
